@@ -30,7 +30,7 @@ function timer() {
 
 setInterval(timer, 1000);
 
-
+/*
 // Email Feedback
 function sendMail(event) {
     if (event && event.preventDefault) {
@@ -53,7 +53,7 @@ function sendMail(event) {
             alert("Fehler beim Senden: " + (error.text || error));
         });
 }
-
+*/
 
 
 // Scroll basierender Header
