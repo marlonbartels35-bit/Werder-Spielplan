@@ -9,12 +9,14 @@
 </head>
 
 <body>
+    <br><br><br>
+    
     <div class="header">
-        <h1 class="menü-headline">Werder Bremen Spielplan</h1>
+        <h1 class="menü-headline">Werder Bremen Spielplan</h1> 
 
         <nav class="menü">
             <a class="menü-link" href="index.html">Home</a>
-            <a class="menü-link" href="#.html">Archiv</a>
+            <a class="menü-link" href="archive.html">Archiv</a>
             <a class="menü-link" href="#.html">Kontakt</a>
             <a class="menü-link" href="#.html">Platzhalter</a>
         </nav>
@@ -180,6 +182,38 @@
         <div class="wave"></div>
         <div class="wave"></div>
     </div>
+
+
+
+    <script>
+        const body = document.body;
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset
+
+            if (currentScroll <= 0) {
+                body.classList.remove("scroll-up")
+            }
+
+            if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
+                body.classList.remove("scroll-up")
+                body.classList.add("scroll-down")
+            }
+
+            if (currentScroll < lastScroll && body.classList.contains("scroll-down")) {
+                body.classList.remove("scroll-down")
+                body.classList.add("scroll-up")
+            }
+            
+
+
+
+            lastScroll = currentScroll;
+        })
+
+    </script>
+
 </body>
 
 </html>
