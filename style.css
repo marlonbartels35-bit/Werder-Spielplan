@@ -111,6 +111,25 @@
     align-items: center;
 }
 
+body.saison25-26 .spieltag-schriftart,
+body.saison25-26 .heimspiel-schriftart,
+
+body.saison25-26 .daten {
+    width: fit-content;
+    align-self: center;
+}
+
+body.saison25-26 .bundesliga {
+    margin-top: 180px;
+}
+
+.ergebnis{
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 32px;
+    padding: 4px;
+    color:rgb(2, 125, 69);
+}
+
 .auswärtsspiel {
     /*border: blue solid 1px;*/
     border-radius: 16px;
@@ -263,6 +282,87 @@ body {
     opacity: 0.9;
 }
 
+.form-group {
+    border-radius: 16px;
+    font-size: 32px;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    color: rgb(255, 255, 255);
+    gap: 8px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+
+.contact-form {
+    border-radius: 16px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin: 48px;
+    padding: 32px;
+    gap: 32px;
+    top: 178px;
+    background: rgb(29, 144, 83);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#name,
+#email,
+#subject,
+#message {
+    height: 48px;
+    font-size: 24px;
+    border-radius: 8px;
+}
+
+#message {
+    height: 150px
+}
+
+#submit {
+    font-size: 32px;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    color: rgb(255, 255, 255);
+    height: 64px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.25s ease-in-out;
+
+}
+
+#submit:hover {
+    background-color: rgba(199, 199, 199, 0.7);
+    transform: scale(1.05);
+    border: 1px solid white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.2);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    cursor: pointer;
+}
+
+#submit:active {
+    transform: scale(0.99);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
 @keyframes wave {
     2% {
         transform: translateX(1);
@@ -327,7 +427,7 @@ body {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: calc(100% - 128px);
+        width: calc(100% - 64px);
         margin: 8px;
         padding: 8px;
         gap: 16px;
@@ -352,7 +452,11 @@ body {
         margin: 0;
     }
 
+    body.saison25-26 .bundesliga {
+        margin-top: 180px;
+    }
 }
+
 
 /* Scroll Bar */
 .scroll-down .header {

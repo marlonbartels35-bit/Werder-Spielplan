@@ -1,3 +1,28 @@
+// Scroll basierender Header; wichtig: muss hier oben stehen
+const body = document.body;
+let lastScroll = 0;
+
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset
+
+    if (currentScroll <= 0) {
+        body.classList.remove("scroll-up")
+    }
+
+    if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
+        body.classList.remove("scroll-up")
+        body.classList.add("scroll-down")
+    }
+
+    if (currentScroll < lastScroll && body.classList.contains("scroll-down")) {
+        body.classList.remove("scroll-down")
+        body.classList.add("scroll-up")
+    }
+
+    lastScroll = currentScroll;
+})
+
+
 // Neuer selbst aktualisierender Countdown
 const Tage = document.getElementById("days");
 const Stunden = document.getElementById("hours");
@@ -108,7 +133,7 @@ function timer() {
 
 setInterval(timer, 1000);*/
 
-/*
+
 // Email Feedback
 function sendMail(event) {
     if (event && event.preventDefault) {
@@ -131,29 +156,3 @@ function sendMail(event) {
             alert("Fehler beim Senden: " + (error.text || error));
         });
 }
-*/
-
-
-// Scroll basierender Header
-const body = document.body;
-let lastScroll = 0;
-
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset
-
-    if (currentScroll <= 0) {
-        body.classList.remove("scroll-up")
-    }
-
-    if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
-        body.classList.remove("scroll-up")
-        body.classList.add("scroll-down")
-    }
-
-    if (currentScroll < lastScroll && body.classList.contains("scroll-down")) {
-        body.classList.remove("scroll-down")
-        body.classList.add("scroll-up")
-    }
-
-    lastScroll = currentScroll;
-})

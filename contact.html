@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "9AY0oGe2fMHWUVrex",
+            });
+        })();
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="menü-headline">Werder Bremen Spielplan</h1>
+
+        <nav class="menü">
+            <a class="menü-link" href="index.html">Home</a>
+            <a class="menü-link" href="archive.html">Archiv</a>
+            <a class="menü-link" href="contact.html">Kontakt</a>
+            <a class="menü-link" href="saison25-26.html">25 / 26</a>
+        </nav>
+    </div>
+
+
+    <form class="contact-form" onsubmit="sendMail(event)">
+        <div class="form-group">
+            <label for="name"><strong>Name:</strong></label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email"><strong>E-Mail:</strong></label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="subject"><strong>Betreff:</strong></label>
+            <input type="text" id="subject" name="subject" required>
+        </div>
+        <div class="form-group">
+            <label for="message"><strong>Nachricht:</strong></label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button id="submit" type="submit">Absenden</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
