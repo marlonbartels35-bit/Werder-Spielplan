@@ -10,7 +10,7 @@
 
 <body>
     <br><br><br>
-    
+
     <div class="header">
         <h1 class="menü-headline">Werder Bremen Spielplan</h1> 
 
@@ -22,6 +22,7 @@
         </nav>
     </div>
 
+    <!-- Countdown -->
     <div class="container-countdown">
         <h1 style="font-size: 48px;">Matchday in:</h1>
         <div class="timebox">
@@ -183,36 +184,6 @@
         <div class="wave"></div>
     </div>
 
-
-
-    <script>
-        const body = document.body;
-        let lastScroll = 0;
-
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset
-
-            if (currentScroll <= 0) {
-                body.classList.remove("scroll-up")
-            }
-
-            if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
-                body.classList.remove("scroll-up")
-                body.classList.add("scroll-down")
-            }
-
-            if (currentScroll < lastScroll && body.classList.contains("scroll-down")) {
-                body.classList.remove("scroll-down")
-                body.classList.add("scroll-up")
-            }
-            
-
-
-
-            lastScroll = currentScroll;
-        })
-
-    </script>
 
 </body>
 
