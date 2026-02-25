@@ -1,3 +1,81 @@
+// Neuer selbst aktualisierender Countdown
+const Tage = document.getElementById("days");
+const Stunden = document.getElementById("hours");
+const Minuten = document.getElementById("minutes");
+const Sekunden = document.getElementById("seconds");
+const countdownLabel = document.getElementById("countdown-label");
+const MATCH_DURATION_MINUTES = 120;
+
+function getMatchDates() {
+    return [...document.querySelectorAll(".daten[data-kickoff]")]
+        .map((el) => new Date(el.dataset.kickoff))
+        .filter((d) => !isNaN(d))
+        .sort((a, b) => a - b);
+}
+
+function updateCountdown() {
+    const now = new Date();
+    const allMatches = getMatchDates();
+    const currentMatch = allMatches.find((matchDate) => {
+        const matchEnd = matchDate.getTime() + MATCH_DURATION_MINUTES * 60 * 1000;
+        return now.getTime() >= matchDate.getTime() && now.getTime() < matchEnd;
+    });
+
+    if (currentMatch) {
+        const matchEnd = currentMatch.getTime() + MATCH_DURATION_MINUTES * 60 * 1000;
+        const distance = matchEnd - now.getTime();
+
+        const hours = Math.floor(distance / (1000 * 60 * 60));
+        const minutes = Math.floor(distance / (1000 * 60)) % 60;
+        const seconds = Math.floor(distance / 1000) % 60;
+
+        if (countdownLabel) {
+            countdownLabel.textContent = "Gerade wird gespielt.";
+        }
+
+        Tage.textContent = "00";
+        Stunden.textContent = String(hours).padStart(2, "0");
+        Minuten.textContent = String(minutes).padStart(2, "0");
+        Sekunden.textContent = String(seconds).padStart(2, "0");
+        return;
+    }
+
+    const nextMatch = allMatches.find((d) => d > now) || null;
+
+    if (!nextMatch) {
+        if (countdownLabel) {
+            countdownLabel.textContent = "Die Saison ist zuende.";
+        }
+        Tage.textContent = "00";
+        Stunden.textContent = "00";
+        Minuten.textContent = "00";
+        Sekunden.textContent = "00";
+        return;
+    }
+
+    if (countdownLabel) {
+        countdownLabel.textContent = "Matchday in:";
+    }
+
+    const distance = nextMatch.getTime() - now.getTime();
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(distance / (1000 * 60 * 60)) % 24;
+    const minutes = Math.floor(distance / (1000 * 60)) % 60;
+    const seconds = Math.floor(distance / 1000) % 60;
+
+    Tage.textContent = String(days).padStart(2, "0");
+    Stunden.textContent = String(hours).padStart(2, "0");
+    Minuten.textContent = String(minutes).padStart(2, "0");
+    Sekunden.textContent = String(seconds).padStart(2, "0");
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+
+/* ALTER COUNTDOWN
+
 const Tage = document.getElementById('days');
 const Stunden = document.getElementById('hours');
 const Minuten = document.getElementById('minutes');
@@ -28,7 +106,7 @@ function timer() {
     }
 }
 
-setInterval(timer, 1000);
+setInterval(timer, 1000);*/
 
 /*
 // Email Feedback

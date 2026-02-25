@@ -24,7 +24,7 @@
 
     <!-- Countdown -->
     <div class="container-countdown">
-        <h1 style="font-size: 48px;">Matchday in:</h1>
+        <h1 id="countdown-label" style="font-size: 48px;">Matchday in:</h1>
         <div class="timebox">
             <div class="time">
                 <h2 id="days">00</h2>
@@ -44,8 +44,6 @@
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
-    <!-- Die src muss hier stehen -->
 
     <div class="bundesliga">
 
@@ -58,7 +56,7 @@
                 Werder Bremen - Heidenheim 
                 <img class="logo" src="assets/1._FC_Heidenheim.png" alt="Logo HDH">
             </p>
-            <p class="daten" style="color: rgb(255, 255, 255); background-color: rgba(2, 125, 69, 0.75);">
+            <p class="daten" data-kickoff="2026-02-28T15:30:00" style="color: rgb(255, 255, 255); background-color: rgba(2, 125, 69, 0.75);">
                 Samstag, 28.02.2026 15:30 - Weserstadion</p>
         </nav>
 
@@ -70,7 +68,7 @@
                 Union Berlin - Werder Bremen
                 <img class="logo" src="assets/SVW.png" alt="Logo SVW">
             </p>
-            <p class="daten" style="color: rgb(255, 255, 255);">
+            <p class="daten" data-kickoff="2026-03-08T17:30:00" style="color: rgb(255, 255, 255);">
                 Sonntag, 08.03.2026 17:30 - A. d. A. Försterei</p>
         </nav>
 
@@ -81,7 +79,7 @@
                 Werder Bremen - Mainz 05 
                 <img class="logo" src="assets/Mainz_05.png" alt="Logo">
             </p>
-            <p class="daten" style="color: rgb(255, 255, 255); background-color: rgba(2, 125, 69, 0.75);">
+            <p class="daten" data-kickoff="2026-03-15T15:30:00" style="color: rgb(255, 255, 255); background-color: rgba(2, 125, 69, 0.75);">
                 Samstag, 15.03.2026 15:30 - Weserstadion</p>
         </nav>
 
@@ -91,7 +89,7 @@
                 Wolfsburg - Werder Bremen
                 <img class="logo" src="assets/SVW.png" alt="Logo SVW">
             </p>
-            <p class="daten" style="color: rgb(255, 255, 255);">
+            <p class="daten" data-kickoff="2026-03-21T15:30:00" style="color: rgb(255, 255, 255);">
                 Samstag, 21.03.2026 15:30 - Volkswagen Arena</p>
         </nav>
 
@@ -104,8 +102,8 @@
                 Werder Bremen - RB Leipzig 
                 <img class="logo-ersatz-rbl" src="assets/Red-Bull.png" alt="Logo">
             </p>
-            <p class="daten" style="color: rgb(255, 255, 255); background-color: rgba(2, 125, 69, 0.75);">
-                Samstag, 04.04. 15:30 - Weserstadion</p>
+            <p class="daten" data-kickoff="2026-04-04T15:30:00" style="color: rgb(255, 255, 255); background-color: rgba(2, 125, 69, 0.75);">
+                Samstag, 04.04.2026 15:30 - Weserstadion</p>
         </nav>
 
         <nav class="auswärtsspiel">
@@ -114,7 +112,7 @@
                 1. FC Köln - Werder Bremen
                 <img class="logo" src="assets/SVW.png" alt="Logo SVW">
             </p>
-            <p class="daten" style="color: rgb(255, 255, 255);">
+            <p class="daten" data-kickoff="2026-04-11T15:30:00" style="color: rgb(255, 255, 255);">
                 Samstag, 11.04.2026 15:30 - RheinEnergieSTADION</p>
         </nav>
 
@@ -125,7 +123,7 @@
                 Werder Bremen - Hamburger SV 
                 <img class="logo-ersatz-hsv" src="assets/Scheißhaufen.png" alt="Logo">
             </p>
-            <p class="daten" style="color: rgb(255, 255, 255); background-color: rgba(2, 125, 69, 0.75);">
+            <p class="daten" data-kickoff="2026-04-18T15:30:00" style="color: rgb(255, 255, 255); background-color: rgba(2, 125, 69, 0.75);">
                 Samstag, 18.04.2026 15:30 - Weserstadion</p>
         </nav>
 
@@ -135,7 +133,7 @@
                 VFB Stuttgart - Werder Bremen
                 <img class="logo" src="assets/SVW.png" alt="Logo SVW">
             </p>
-            <p class="daten" style="color: rgb(255, 255, 255);">
+            <p class="daten" data-kickoff="2026-04-25T15:30:00" style="color: rgb(255, 255, 255);">
                 Samstag, 25.04.2026 15:30 - MHPArena</p>
         </nav>
 
@@ -148,7 +146,7 @@
                 Werder Bremen - FC Augsburg 
                 <img class="logo" src="assets/Logo_FC_Augsburg.png" alt="Logo">
             </p>
-            <p class="daten" style="color: rgb(255, 255, 255); background-color: rgba(2, 125, 69, 0.75);">
+            <p class="daten" data-kickoff="2026-05-02T15:30:00" style="color: rgb(255, 255, 255); background-color: rgba(2, 125, 69, 0.75);">
                 Samstag, 02.05.2026 15:30 - Weserstadion</p>
         </nav>
 
@@ -158,7 +156,7 @@
                 TSG Hoffenheim - Werder Bremen
                 <img class="logo" src="assets/SVW.png" alt="Logo SVW">
             </p>
-            <p class="daten" style="color: rgb(255, 255, 255);">
+            <p class="daten" data-kickoff="2026-05-09T15:30:00" style="color: rgb(255, 255, 255);">
                 Samstag, 09.05.2026 15:30 - PreZero Arena</p>
         </nav>
 
@@ -169,7 +167,7 @@
                 Werder Bremen - Borussia Dortmund 
                 <img class="logo" src="assets/Borussia_Dortmund_logo.png" alt="Logo">
             </p>
-            <p class="daten" style="color: rgb(255, 255, 255); background-color: rgba(2, 125, 69, 0.75);">
+            <p class="daten" data-kickoff="2026-05-16T15:30:00" style="color: rgb(255, 255, 255); background-color: rgba(2, 125, 69, 0.75);">
                 Samstag, 16.05.2026 15:30 - Weserstadion</p>
         </nav>
 
@@ -184,6 +182,8 @@
         <div class="wave"></div>
     </div>
 
+    <script src="script.js"></script>
+    <!-- Die src muss ganz unten stehen -->
 </body>
 
 </html>
