@@ -158,11 +158,69 @@ body.saison25-26 .bundesliga {
 }
 
 
+
+.torschuetze-liste{
+    --icon-size: 24px;
+    --icon-clearance: 40px; /* Abstand rund um den Ball */
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0 auto 16px auto;
+    
+}
+
+.torschuetze-icon{
+    position: absolute;
+    left: 50%;
+    top: 8px;
+    transform: translateX(-50%);
+    width: var(--icon-size);
+    margin: 0;
+}
+
+.torschuetze-heim{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+    padding-right: calc(var(--icon-size) / 2 + var(--icon-clearance));
+}
+
+.torschuetze-auswaerts{
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    padding-left: calc(var(--icon-size) / 2 + var(--icon-clearance));
+}
+
+.torschuetze-heim ul,
+.torschuetze-auswaerts ul{
+    margin: 0;
+    padding: 8px 12px;
+    list-style: none;
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.15);
+    display: inline-block;
+    min-width: 320px;   /* hier Breite einstellen */
+}
+
+.torschuetze-heim li,
+.torschuetze-auswaerts li{
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+}
+
+
+
+
 .daten {
     /*border: red solid solid 1px;*/
     font-size: 20px;
     display: flex;
-    justify-content: center;
+    justify-self: start;
 }
 
 .month {
