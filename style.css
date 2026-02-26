@@ -111,8 +111,13 @@
 
 }
 
+.mannschaft-schriftart-aktuell {
+    font: white;
+    display: flex;
+    align-items: center;
+}
 
-.heimspiel-schriftart {
+.mannschaft-schriftart-archiv {
     font: white;
     display: flex;
     align-items: center;
@@ -152,9 +157,6 @@ body.saison25-26 .bundesliga {
         0px 32px 31px rgba(16, 106, 106, 0.20);
 }
 
-.auswärtsspiel-schriftart {
-    font: white;
-}
 
 .daten {
     /*border: red solid solid 1px;*/
