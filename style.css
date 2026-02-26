@@ -76,7 +76,14 @@
 }
 
 
-.bundesliga {
+.bundesliga-aktuell {
+    /*border: red solid solid 1px;*/
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.bundesliga-archiv {
     /*border: red solid solid 1px;*/
     display: flex;
     flex-direction: column;
@@ -412,15 +419,15 @@ body {
     }
 
     .logo {
-        width: 32px;
+        width: 24px;
     }
 
     .logo-ersatz-hsv {
-        width: 48px;
+        width: 40px;
     }
 
     .logo-ersatz-rbl {
-        width: 16px;
+        width: 8px;
     }
 
     .header {
@@ -448,7 +455,7 @@ body {
     }
 
     .menü-link {
-        font-size: 18px;
+        font-size: 12px;
         margin: 0;
     }
 
@@ -456,13 +463,36 @@ body {
         margin-top: 180px;
     }
 
-    .bundesliga {
+    .bundesliga-aktuell {
         /*border: red solid solid 1px;*/
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        width: 436px;
     }
 
+    .bundesliga-archiv {
+        /*border: red solid solid 1px;*/
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 436px;
+    }
+
+    .mannschaft-schriftart-aktuell {
+        font-size: 12px;
+        font: white;
+        display: flex;
+        align-items: center;
+    }
+
+    .mannschaft-schriftart-archiv {
+        font-size: 12px;
+        font: white;
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
 
     .heimspiel {
         /*border: green solid 1px;*/
@@ -484,14 +514,6 @@ body {
 
     }
 
-
-    .heimspiel-schriftart {
-        font-size: 24px;
-        font: white;
-        display: flex;
-        align-items: center;
-    }
-
     .auswärtsspiel {
         font-size: 24px;
         /*border: blue solid 1px;*/
@@ -508,8 +530,13 @@ body {
             0px 32px 31px rgba(16, 106, 106, 0.20);
     }
 
-    .daten{
+    .daten {
         font-size: 12px;
+    }
+
+    .ergebnis {
+        font-size: 12px;
+        margin: 4px;
     }
 }
 
