@@ -159,18 +159,19 @@ body.saison25-26 .bundesliga {
 
 
 
-.torschuetze-liste{
+.torschuetze-liste {
     --icon-size: 24px;
-    --icon-clearance: 40px; /* Abstand rund um den Ball */
+    --icon-clearance: 40px;
+    /* Abstand rund um den Ball */
     position: relative;
     display: flex;
     align-items: flex-start;
     width: 100%;
     margin: 0 auto 16px auto;
-    
+
 }
 
-.torschuetze-icon{
+.torschuetze-icon {
     position: absolute;
     left: 50%;
     top: 8px;
@@ -179,7 +180,7 @@ body.saison25-26 .bundesliga {
     margin: 0;
 }
 
-.torschuetze-heim{
+.torschuetze-heim {
     flex: 1;
     display: flex;
     justify-content: flex-end;
@@ -187,30 +188,38 @@ body.saison25-26 .bundesliga {
     padding-right: calc(var(--icon-size) / 2 + var(--icon-clearance));
 }
 
-.torschuetze-auswaerts{
+.torschuetze-auswaerts {
     flex: 1;
     display: flex;
     justify-content: flex-start;
     text-align: left;
     padding-left: calc(var(--icon-size) / 2 + var(--icon-clearance));
+    font-size: 16px;
 }
 
 .torschuetze-heim ul,
-.torschuetze-auswaerts ul{
+.torschuetze-auswaerts ul {
     margin: 0;
     padding: 8px 12px;
     list-style: none;
     border-radius: 16px;
     background-color: rgba(255, 255, 255, 0.15);
     display: inline-block;
-    min-width: 320px;   /* hier Breite einstellen */
+    min-width: 320px;
+    /* hier Breite einstellen */
 }
 
 .torschuetze-heim li,
-.torschuetze-auswaerts li{
+.torschuetze-auswaerts li {
     margin: 0;
     padding: 0;
     font-size: 24px;
+}
+
+.torschuetze-heim ul li,
+.torschuetze-auswaerts ul li {
+    font-size: 16px !important;
+    line-height: 1.25;
 }
 
 
@@ -588,6 +597,38 @@ body {
             0px 18px 17px rgba(16, 106, 106, 0.15),
             0px 25px 24px rgba(16, 106, 106, 0.18),
             0px 32px 31px rgba(16, 106, 106, 0.20);
+    }
+
+    .torschuetze-liste {
+        --icon-size: 18px;
+        --icon-clearance: 20px;
+        margin: 0 auto 12px auto;
+    }
+
+    .torschuetze-icon {
+        top: 6px;
+        width: var(--icon-size);
+    }
+
+    .torschuetze-heim {
+        padding-right: calc(var(--icon-size) / 2 + var(--icon-clearance));
+    }
+
+    .torschuetze-auswaerts {
+        padding-left: calc(var(--icon-size) / 2 + var(--icon-clearance));
+    }
+
+    .torschuetze-heim ul,
+    .torschuetze-auswaerts ul {
+        min-width: 0;
+        max-width: 42vw;
+        padding: 6px 8px;
+    }
+
+    .torschuetze-heim ul li,
+    .torschuetze-auswaerts ul li {
+        font-size: 10px !important;
+        line-height: 1.25;
     }
 
     .daten {
