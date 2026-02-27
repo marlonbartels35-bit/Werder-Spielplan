@@ -705,8 +705,21 @@ body {
         padding: 6px 8px;
     }
 
+    .torschuetze-heim-heimspiel ul,
+    .torschuetze-auswaerts-heimspiel ul {
+        min-width: 0;
+        max-width: 42vw;
+        padding: 6px 8px;
+    }
+
     .torschuetze-heim ul li,
     .torschuetze-auswaerts ul li {
+        font-size: 10px !important;
+        line-height: 1.25;
+    }
+
+    .torschuetze-heim-heimspiel ul li,
+    .torschuetze-auswaerts-heimspiel ul li {
         font-size: 10px !important;
         line-height: 1.25;
     }
