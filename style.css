@@ -698,6 +698,14 @@ body {
         padding-left: calc(var(--icon-size) / 2 + var(--icon-clearance));
     }
 
+    .torschuetze-heim-heimspiel {
+        padding-right: calc(var(--icon-size) / 2 + var(--icon-clearance));
+    }
+
+    .torschuetze-auswaerts-heimspiel {
+        padding-left: calc(var(--icon-size) / 2 + var(--icon-clearance));
+    }
+
     .torschuetze-heim ul,
     .torschuetze-auswaerts ul {
         min-width: 0;
