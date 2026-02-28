@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Archiv</title>
     <link href="style.css" rel="stylesheet">
 </head>
+
 <body>
     <div class="header">
-        <h1 class="menü-headline">Werder Bremen Archiv</h1> 
+        <h1 class="menü-headline">Werder Bremen Archiv</h1>
 
         <nav class="menü">
             <a class="menü-link" href="index.html">Home</a>
@@ -18,11 +20,35 @@
         </nav>
     </div>
 
-    <div class="saison-auswahl">
-    <a class="saison-auswahl-25-26" href="saison25-26.html" style="color: rgb(255, 255, 255); background-color: rgba(2, 125, 69, 0.75);">
-        Zur aktuellen Saison</a>
-    </div>
+    <section class="saison-auswahl">
+        <a class="saison-link" href="saison25-26.html"
+            style="--season-bg: url('assets/bg-heim-25-26.png'); --season-accent: rgba(2, 125, 69, 0.75); --season-size: 360px">
+            <span class="saison-link-kicker">Aktuell</span>
+            <span class="saison-link-title">Saison 25 / 26</span>
+        </a>
+
+        <a class="saison-link" href="saison24-25.html"
+            style="--season-bg: url('assets/bg-heim-24-25.png'); --season-accent: rgba(5, 95, 145, 0.75);">
+            <span class="saison-link-kicker">Archiv</span>
+            <span class="saison-link-title">Saison 24 / 25</span>
+        </a>
+
+        <a class="saison-link" href="#.html"
+            style="--season-bg: url('assets/bg-heim-23-24.png'); --season-accent: rgba(5, 95, 145, 0.75); --season-size: 420px">
+            <span class="saison-link-kicker">Archiv</span>
+            <span class="saison-link-title">Saison 23 / 24</span>
+        </a>
+
+        <a class="saison-link" href="#.html"
+            style="--season-bg: url('assets/bg-heim-22-23.png'); --season-accent: rgba(5, 95, 145, 0.75); --season-size: 500px">
+            <span class="saison-link-kicker">Archiv</span>
+            <span class="saison-link-title">Saison 22 / 23</span>
+        </a>
+
+    </section>
+
 
     <script src="script.js"></script>
 </body>
+
 </html>
