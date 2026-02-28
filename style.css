@@ -96,6 +96,18 @@ body {
     --heimspiel-bg-size: 264px;
     --heimspiel-bg-repeat: repeat;
     --auswaertsspiel-bg: linear-gradient(180deg, #1c4541, #167976);
+    --heimspiel-shadow: 0px 1px 0px rgba(2, 125, 69, 0.03),
+        0px 2px 2px rgba(2, 125, 69, 0.05),
+        0px 5px 4px rgba(2, 125, 69, 0.08),
+        0px 8px 8px rgba(2, 125, 69, 0.10),
+        0px 13px 12px rgba(2, 125, 69, 0.13),
+        0px 18px 17px rgba(2, 125, 69, 0.15),
+        0px 25px 24px rgba(2, 125, 69, 0.18),
+        0px 32px 31px rgba(2, 125, 69, 0.20);
+    --auswaertsspiel-shadow: 0px 13px 12px rgba(16, 106, 106, 0.13),
+        0px 18px 17px rgba(16, 106, 106, 0.15),
+        0px 25px 24px rgba(16, 106, 106, 0.18),
+        0px 32px 31px rgba(16, 106, 106, 0.20);
 }
 
 /* Hintergrund für saison25-26.html */
@@ -114,6 +126,15 @@ body.saison24-25 {
     --auswaertsspiel-bg: url(assets/bg-away-24-25.png);
     --auswaerts-bg-size: 1280px;
     --auswaerts-bg-repeat: repeat;
+    --heimspiel-shadow: 0px 3px 0px rgba(24, 79, 54, 0.08),
+        0px 8px 18px rgba(24, 79, 54, 0.25),
+        0px 18px 36px rgba(24, 79, 54, 0.3);
+    --auswaertsspiel-shadow: 0px 1px 1px rgba(246, 236, 226, 0.03),
+        0px 5px 4px rgba(246, 236, 226, 0.06),
+        0px 12px 9px rgba(246, 236, 226, 0.09),
+        0px 20px 15px rgba(246, 236, 226, 0.12),
+        0px 32px 24px rgba(246, 236, 226, 0.15);
+
 }
 
 .heimspiel {
@@ -126,14 +147,7 @@ body.saison24-25 {
     background-image: var(--heimspiel-bg);
     background-size: var(--heimspiel-bg-size);
     background-repeat: var(--heimspiel-bg-repeat);
-    box-shadow: 0px 1px 0px rgba(2, 125, 69, 0.03),
-        0px 2px 2px rgba(2, 125, 69, 0.05),
-        0px 5px 4px rgba(2, 125, 69, 0.08),
-        0px 8px 8px rgba(2, 125, 69, 0.10),
-        0px 13px 12px rgba(2, 125, 69, 0.13),
-        0px 18px 17px rgba(2, 125, 69, 0.15),
-        0px 25px 24px rgba(2, 125, 69, 0.18),
-        0px 32px 31px rgba(2, 125, 69, 0.20);
+    box-shadow: var(--heimspiel-shadow);
 
 }
 
@@ -178,10 +192,7 @@ body[class*="saison"] .bundesliga {
     background: var(--auswaertsspiel-bg);
     background-size: var(--auswaerts-bg-size);
     background-repeat: var(--auswaerts-bg-repeat);
-    box-shadow: 0px 13px 12px rgba(16, 106, 106, 0.13),
-        0px 18px 17px rgba(16, 106, 106, 0.15),
-        0px 25px 24px rgba(16, 106, 106, 0.18),
-        0px 32px 31px rgba(16, 106, 106, 0.20);
+    box-shadow: var(--auswaertsspiel-shadow);
 }
 
 
@@ -702,14 +713,7 @@ body {
         background-image: var(--heimspiel-bg);
         background-size: var(--heimspiel-bg-size);
         background-repeat: var(--heimspiel-bg-repeat);
-        box-shadow: 0px 1px 0px rgba(2, 125, 69, 0.03),
-            0px 2px 2px rgba(2, 125, 69, 0.05),
-            0px 5px 4px rgba(2, 125, 69, 0.08),
-            0px 8px 8px rgba(2, 125, 69, 0.10),
-            0px 13px 12px rgba(2, 125, 69, 0.13),
-            0px 18px 17px rgba(2, 125, 69, 0.15),
-            0px 25px 24px rgba(2, 125, 69, 0.18),
-            0px 32px 31px rgba(2, 125, 69, 0.20);
+        box-shadow: var(--heimspiel-shadow);
 
     }
 
@@ -722,10 +726,7 @@ body {
         display: flex;
         flex-direction: column;
         background: var(--auswaertsspiel-bg);
-        box-shadow: 0px 13px 12px rgba(16, 106, 106, 0.13),
-            0px 18px 17px rgba(16, 106, 106, 0.15),
-            0px 25px 24px rgba(16, 106, 106, 0.18),
-            0px 32px 31px rgba(16, 106, 106, 0.20);
+        box-shadow: var(--auswaertsspiel-shadow);
     }
 
     .torschuetze-liste {
